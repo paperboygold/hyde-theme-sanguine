@@ -30,7 +30,7 @@ A dark, sophisticated theme for [HyDE (Hyprland Desktop Environment)](https://gi
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/hyde-theme-sanguine.git
+git clone https://github.com/paperboygold/hyde-theme-sanguine.git
 cd hyde-theme-sanguine
 ```
 
