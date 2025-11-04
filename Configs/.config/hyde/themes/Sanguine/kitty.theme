@@ -1,0 +1,46 @@
+$HOME/.config/kitty/theme.conf|killall -SIGUSR1 kitty
+# Sanguine Theme - Dark maroon and gold
+
+# Special
+background #120a0a
+foreground #fcf8f8
+
+# Black
+color0 #1c1212
+color8 #261616
+
+# Red
+color1 #a52a2a
+color9 #c73737
+
+# Green (repurposed as secondary red)
+color4  #8b0000
+color12 #9d0000
+
+# Yellow (golden accent)
+color3  #d4a753
+color11 #e0b969
+
+# Blue (repurposed as dark red)
+color2  #4b0000
+color10 #5d0000
+
+# Magenta (repurposed as burgundy)
+color5  #722f37
+color13 #8a3844
+
+# Cyan (repurposed as rose gold)
+color6  #b8860b
+color14 #daa520
+
+# White
+color7  #fcf8f8
+color15 #ffffff
+
+# Cursor
+cursor #d4a753
+cursor_text_color #120a0a
+
+# Selection highlight
+selection_foreground #fcf8f8
+selection_background #a52a2a

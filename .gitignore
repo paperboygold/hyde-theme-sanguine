@@ -1,0 +1,11 @@
+# HyDE specific
+*.swp
+*.swo
+*~
+.DS_Store
+wall.set
+wall.swww.png
+
+# Backup files
+*.bak
+*.backup
