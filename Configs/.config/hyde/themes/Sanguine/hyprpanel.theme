@@ -1,0 +1,234 @@
+$HOME/.config/hyprpanel/style.css|pkill -SIGUSR1 hyprpanel
+/* Sanguine Theme for HyprPanel
+ * Dark maroon and gold color scheme
+ * Matches the Sanguine HyDE theme
+ */
+
+/* Color Definitions */
+@define-color bg-color #120a0a;
+@define-color fg-color #fcf8f8;
+@define-color primary-color #a52a2a;
+@define-color secondary-color #8b0000;
+@define-color accent-color #d4a753;
+@define-color hover-bg #d4a753;
+@define-color hover-fg #120a0a;
+@define-color active-bg #a52a2a;
+@define-color active-fg #fcf8f8;
+@define-color urgent-color #ff0000;
+@define-color border-color #a52a2a;
+@define-color module-bg #1a0f0f;
+
+/* Panel Background */
+window {
+    background-color: alpha(@bg-color, 0.95);
+    color: @fg-color;
+    border: 2px solid @border-color;
+    border-radius: 10px;
+}
+
+/* All module containers */
+box {
+    background-color: transparent;
+    color: @fg-color;
+}
+
+/* Buttons and clickable elements */
+button {
+    background-color: @module-bg;
+    color: @fg-color;
+    border: 1px solid alpha(@primary-color, 0.3);
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin: 2px;
+    transition: all 200ms ease-in-out;
+}
+
+button:hover {
+    background-color: @hover-bg;
+    color: @hover-fg;
+    border-color: @accent-color;
+    box-shadow: 0 2px 8px alpha(@accent-color, 0.3);
+}
+
+button:active,
+button.active {
+    background-color: @active-bg;
+    color: @active-fg;
+    border-color: @primary-color;
+}
+
+/* Workspace pager */
+.pager button {
+    min-width: 32px;
+    min-height: 32px;
+    background-color: alpha(@secondary-color, 0.5);
+    border-color: @secondary-color;
+}
+
+.pager button.active {
+    background: linear-gradient(135deg, @primary-color, @accent-color);
+    border-color: @accent-color;
+    font-weight: bold;
+}
+
+.pager button.urgent {
+    background-color: @urgent-color;
+    border-color: @urgent-color;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.pager button:hover {
+    background-color: @hover-bg;
+    border-color: @accent-color;
+}
+
+/* Taskbar */
+.taskbar button {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.taskbar button.active {
+    background: linear-gradient(135deg, @primary-color, alpha(@accent-color, 0.7));
+}
+
+/* System tray */
+.systray {
+    background-color: @module-bg;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.systray image {
+    color: @fg-color;
+}
+
+/* Audio/Volume */
+.audio button {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.audio button:hover {
+    background: linear-gradient(135deg, @hover-bg, @accent-color);
+}
+
+/* Clock */
+.clock {
+    background-color: @module-bg;
+    color: @accent-color;
+    font-weight: bold;
+    border: 1px solid @primary-color;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 4px;
+}
+
+.clock:hover {
+    background: linear-gradient(135deg, @primary-color, @accent-color);
+    color: @bg-color;
+}
+
+/* Session/Power */
+.session button {
+    min-width: 48px;
+    min-height: 48px;
+    background-color: alpha(@secondary-color, 0.6);
+}
+
+.session button:hover {
+    background-color: @urgent-color;
+    color: @fg-color;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: alpha(@bg-color, 0.98);
+    color: @fg-color;
+    border: 2px solid @accent-color;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+tooltip label {
+    color: @fg-color;
+}
+
+/* Scrollbars */
+scrollbar {
+    background-color: alpha(@bg-color, 0.5);
+    border-radius: 8px;
+}
+
+scrollbar slider {
+    background-color: @primary-color;
+    border-radius: 8px;
+    min-width: 8px;
+    min-height: 32px;
+}
+
+scrollbar slider:hover {
+    background-color: @accent-color;
+}
+
+/* Separators */
+separator {
+    background-color: alpha(@primary-color, 0.3);
+    min-width: 1px;
+    min-height: 1px;
+}
+
+/* HUD notifications */
+.hud {
+    background-color: alpha(@bg-color, 0.98);
+    border: 2px solid @accent-color;
+    border-radius: 10px;
+    color: @fg-color;
+}
+
+/* Progress bars */
+progressbar {
+    background-color: alpha(@secondary-color, 0.3);
+    border-radius: 4px;
+}
+
+progressbar progress {
+    background: linear-gradient(90deg, @primary-color, @accent-color);
+    border-radius: 4px;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Icons */
+image {
+    color: @fg-color;
+}
+
+button:hover image {
+    color: @hover-fg;
+}
+
+button.active image {
+    color: @active-fg;
+}
+
+/* Labels */
+label {
+    color: @fg-color;
+}
+
+button:hover label {
+    color: @hover-fg;
+}
+
+button.active label {
+    color: @active-fg;
+}

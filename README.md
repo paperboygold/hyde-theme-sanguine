@@ -13,7 +13,8 @@ A dark, sophisticated theme for [HyDE (Hyprland Desktop Environment)](https://gi
 ## Features
 
 - Custom Hyprland border colors with maroon/gold gradients
-- Waybar theme with dark red-grey background
+- HyprPanel theme with transparent circular icon backdrops and Lannister colors
+- Waybar theme with dark red-grey background (fallback)
 - Rofi launcher with maroon selections
 - Kitty terminal color scheme with burgundy tones
 - Kvantum Qt theme integration
@@ -44,10 +45,28 @@ cp -r Configs/.config/hyde/themes/Sanguine ~/.config/hyde/themes/
 hydectl theme set Sanguine
 ```
 
+### HyprPanel Setup (Recommended)
+
+If using [HyprPanel](https://github.com/HyDE-Project/HyprPanel):
+
+1. Open HyprPanel settings (click the panel icon or use the dashboard)
+2. Navigate to **Theme** settings
+3. Click **Import Theme**
+4. Select `~/.config/hyde/themes/Sanguine/hyprpanel.json`
+5. The theme will be applied with:
+   - Transparent bar with blur effect
+   - Circular icon backdrops with gold borders
+   - Carbon black and burgundy color scheme
+   - Zero pink tones (pure Lannister aesthetic)
+
+The theme includes Hyprland transparency rules for 92% opacity with blur.
+
 ## Theme Components
 
 - `hypr.theme` - Hyprland window borders, gaps, and blur settings
-- `waybar.theme` - Status bar colors
+- `hyprpanel.json` - HyprPanel theme (transparent split design with Lannister colors)
+- `hyprpanel.theme` - HyprPanel CSS (legacy Go version)
+- `waybar.theme` - Status bar colors (fallback)
 - `rofi.theme` - Application launcher colors
 - `kitty.theme` - Terminal color scheme
 - `kvantum/` - Qt application theming
