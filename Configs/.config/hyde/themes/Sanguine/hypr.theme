@@ -34,11 +34,11 @@ decoration {
     shadow:enabled = false
 
     blur {
-        enabled = yes
+        enabled = true
         size = 5
         passes = 4
-        new_optimizations = on
-        ignore_opacity = on
+        optimizations = true
+        ignore_opacity = true
         xray = false
     }
 }
